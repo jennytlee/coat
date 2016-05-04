@@ -14,6 +14,7 @@
 		8DA254F41CDAA9B200341849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA254F21CDAA9B200341849 /* LaunchScreen.storyboard */; };
 		8DA254FF1CDAA9B200341849 /* CoatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA254FE1CDAA9B200341849 /* CoatTests.swift */; };
 		8DA2550A1CDAA9B200341849 /* CoatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA255091CDAA9B200341849 /* CoatUITests.swift */; };
+		8DA2551A1CDAAC6F00341849 /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA255191CDAAC6F00341849 /* OneShotLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8DA255051CDAA9B200341849 /* CoatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA255091CDAA9B200341849 /* CoatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatUITests.swift; sourceTree = "<group>"; };
 		8DA2550B1CDAA9B200341849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DA255191CDAAC6F00341849 /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				8DA254E91CDAA9B200341849 /* AppDelegate.swift */,
 				8DA254EB1CDAA9B200341849 /* ViewController.swift */,
+				8DA255191CDAAC6F00341849 /* OneShotLocationManager.swift */,
 				8DA254ED1CDAA9B200341849 /* Main.storyboard */,
 				8DA254F01CDAA9B200341849 /* Assets.xcassets */,
 				8DA254F21CDAA9B200341849 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA254EC1CDAA9B200341849 /* ViewController.swift in Sources */,
+				8DA2551A1CDAAC6F00341849 /* OneShotLocationManager.swift in Sources */,
 				8DA254EA1CDAA9B200341849 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

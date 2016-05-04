@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter location here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-dD-Pzv">
+                                <rect key="frame" x="191" y="327" width="218" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="GSB-uR-ZHK"/>
+                                    <constraint firstAttribute="height" constant="30" id="YOZ-x1-wES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1G-EK-0sh">
+                                <rect key="frame" x="13" y="126" width="574" height="55"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-kT-5cn">
+                                <rect key="frame" x="133" y="222" width="334" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="9dj-X3-YGU"/>
+                                    <constraint firstAttribute="height" constant="55" id="TlE-vM-66Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="55"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3k-LG-XMX">
+                                <rect key="frame" x="417" y="327" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="k3c-V0-9nc"/>
+                                </constraints>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0a-bZ-vEN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CeO-kT-5cn" firstAttribute="top" secondItem="U1G-EK-0sh" secondAttribute="bottom" constant="41" id="3RZ-2M-Lb0"/>
+                            <constraint firstItem="U1G-EK-0sh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tp-Jt-1V2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4i5-dD-Pzv" secondAttribute="bottom" constant="243" id="ACL-8P-1vi"/>
+                            <constraint firstItem="CeO-kT-5cn" firstAttribute="centerX" secondItem="4i5-dD-Pzv" secondAttribute="centerX" id="HAB-qA-tm4"/>
+                            <constraint firstItem="4i5-dD-Pzv" firstAttribute="top" secondItem="CeO-kT-5cn" secondAttribute="bottom" constant="50" id="Hcu-A8-1t3"/>
+                            <constraint firstItem="U1G-EK-0sh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="M03-8q-Ude"/>
+                            <constraint firstItem="U1G-EK-0sh" firstAttribute="centerX" secondItem="CeO-kT-5cn" secondAttribute="centerX" id="ifO-9b-Fhw"/>
+                            <constraint firstItem="h3k-LG-XMX" firstAttribute="leading" secondItem="4i5-dD-Pzv" secondAttribute="trailing" constant="8" symbolic="YES" id="mqo-2d-ooQ"/>
+                            <constraint firstItem="4i5-dD-Pzv" firstAttribute="top" secondItem="h3k-LG-XMX" secondAttribute="top" id="raK-zs-0SQ"/>
+                            <constraint firstItem="U1G-EK-0sh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="w69-aT-9eM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="U1G-EK-0sh" id="ryk-8b-Fet"/>
+                        <outlet property="cityTextField" destination="4i5-dD-Pzv" id="Tlj-eH-op5"/>
+                        <outlet property="tempLabel" destination="CeO-kT-5cn" id="WtI-1F-Kjs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
